@@ -1,0 +1,85 @@
+@import "@/styles/variables.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'AktivGroteskCorp', sans-serif;
+    box-sizing: border-box;
+    color: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden; 
+}
+
+.modal-open{
+    overflow: hidden;
+}
+
+.content{
+    padding: 2em;
+}
+
+button,
+a,
+input,
+select,
+label {
+    font-family: inherit;
+}
+
+@font-face {
+    font-family: "AktivGroteskCorp";
+    src: url("fonts/AktivGroteskCorp-Regular.eot");
+    src: url("fonts/AktivGroteskCorp-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      url("fonts/AktivGroteskCorp-Regular.woff") format("woff"),
+      url("fonts/AktivGroteskCorp-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "AktivGroteskCorp";
+    src: url("fonts/AktivGroteskCorp-Italic.eot");
+    src: url("fonts/AktivGroteskCorp-Italic.eot?#iefix")
+        format("embedded-opentype"),
+      url("fonts/AktivGroteskCorp-Italic.woff") format("woff"),
+      url("fonts/AktivGroteskCorp-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "AktivGroteskCorp";
+    src: url("fonts/AktivGroteskCorp-Bold.eot");
+    src: url("fonts/AktivGroteskCorp-Bold.eot?#iefix") format("embedded-opentype"),
+      url("fonts/AktivGroteskCorp-Bold.woff") format("woff"),
+      url("fonts/AktivGroteskCorp-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "AktivGroteskCorp";
+    src: url("fonts/AktivGroteskCorp-BoldItalic.eot");
+    src: url("fonts/AktivGroteskCorp-BoldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("fonts/AktivGroteskCorp-BoldItalic.woff") format("woff"),
+      url("fonts/AktivGroteskCorp-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+  }
