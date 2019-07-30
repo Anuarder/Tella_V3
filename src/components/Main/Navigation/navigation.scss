@@ -1,1 +1,59 @@
 @import "@/styles/variables.scss";
+
+.navigation-component{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($page_color, 1);
+}
+
+.navigation{
+    @include flex_horizontal_between();
+    padding: 2.5rem;
+    &__actions{
+        @include flex_vertical_center();
+        font-size: 1.1rem;
+    }
+    &__link{
+        margin-right: 3rem;
+        &:hover{
+            transition: .1s;
+            color: $tella_green;
+            border-bottom: 2px solid $tella_green;
+        }
+    }
+    &__language-switch{
+        cursor: pointer;
+        user-select: none;
+        color: $tella_green;
+    }
+    &__burger-button{
+        display: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .navigation{
+        &__actions{
+            display: none;
+        }
+        &__burger-button{
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navigation-component{
+        background-color: rgba($page_color, .7);
+    }
+    .navigation{
+        padding: 1.5rem;
+        &__logo{
+            max-width: 7rem;
+        }
+    }
+}
