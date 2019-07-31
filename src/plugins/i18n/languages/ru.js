@@ -134,7 +134,7 @@ export default {
     },
 
     projects: {
-        project_overview: "ПОРТФОЛИО",
+        title: "ПОРТФОЛИО",
         go_to_site: "Перейти на сайт",
         in_developing: "В разработке",
         gornoesolnce: `
