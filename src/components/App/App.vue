@@ -2,8 +2,15 @@
     <div class="app-page">
         <v-navigation></v-navigation>
         <div class="app">
-            <v-header></v-header>
-            <v-about></v-about>
+            <div id="header">
+                <v-header></v-header>
+            </div>
+            <div id="about">
+                <v-about></v-about>
+            </div>
+            <div id="services">
+                <v-services></v-services>
+            </div>
         </div>
     </div>
 </template>
@@ -12,11 +19,13 @@ import "./app.scss"
 import VNavigation from "@/components/Navigation/Navigation"
 import VHeader from "@/components/Main/Header/Header"
 import VAbout from "@/components/Main/About/About"
+import VServices from "@/components/Main/Services/Services"
 export default {
     components: {
         VNavigation,
         VHeader,
-        VAbout
+        VAbout,
+        VServices
     }
 }
 </script>

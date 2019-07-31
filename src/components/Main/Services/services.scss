@@ -1,0 +1,222 @@
+@import "@/styles/variables.scss";
+
+
+.services{
+    margin-top: 9rem;
+    &__title{
+        font-size: 2.2rem;
+        margin-left: 10rem;
+    }
+    &__slider{
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        &-item{
+            position: relative;
+            transition: 0.4s ease-in-out;
+            min-width: 101%;
+        }
+        &-container{
+            @include flex_center();
+            height: 100%;
+        }
+        &-image{
+            max-width: 35%;
+            margin-right: 10rem;
+        }
+        &-text{
+            max-width: 550px;
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                margin-top: 1rem;
+                font-size: 1.25rem;
+                line-height: 200%;
+            }
+        }
+        &-button{
+            cursor: pointer;
+            user-select: none;
+            position: absolute;
+            bottom: 5rem;
+            right: 5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .services{
+        &__title{
+            font-size: 3rem;
+            margin-left: 15rem;
+        }
+        &__slider{
+            &-image{
+                margin-right: 15rem;
+            }
+            &-text{
+                max-width: 620px;
+                h1{
+                    font-size: 2.5rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+            &-button{
+                bottom: 7rem;
+                right: 7rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .services{
+        &__title{
+            font-size: 3rem;
+            margin-left: 15rem;
+        }
+        &__slider{
+            &-image{
+                margin-right: 15rem;
+            }
+            &-text{
+                max-width: 700px;
+                h1{
+                    font-size: 2.5rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+            &-button{
+                bottom: 7rem;
+                right: 7rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .services{
+        &__title{
+            font-size: 2rem;
+            margin-left: 2rem;
+        }
+        &__slider{
+            &-text{
+                h1{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    .services{
+        &__title{
+            font-size: 1.8rem;
+        }
+        &__slider{
+            &-text{
+                h1{
+                    font-size: 1.6rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+            &-button{
+                bottom: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .services{
+        &__title{
+            font-size: 1.6rem;
+        }
+        &__slider{
+            &-text{
+                h1{
+                    font-size: 1.4rem;
+                }
+                p{
+                    font-size: .9rem;
+                }
+            }
+            &-button{
+                bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .services{
+        margin-top: 5rem;
+        &__title{
+            font-size: 2rem;
+            margin-left: 0;
+        }
+        &__slider{
+            &-container{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            &-image{
+                max-width: 50%;
+                margin-right: 0;
+            }
+            &-text{
+                margin-top: 2rem;
+                h1{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                    line-height: 160%;
+                }
+            }
+            &-button{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .services{
+        &__title{
+            font-size: 1.5rem;
+            margin-left: 0;
+        }
+        &__slider{
+            &-text{
+                max-width: 90%;
+                margin-top: 1rem;
+                h1{
+                    font-size: 1.3rem;
+                }
+                p{
+                    font-size: .9rem;
+                    br{
+                        display: none;
+                    }
+                    span{
+                        br{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

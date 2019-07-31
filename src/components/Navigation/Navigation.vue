@@ -2,7 +2,7 @@
     <div class="navigation-component">
         <div class="navigation">
             <div class="navigation__logo">
-                <a href="#header">
+                <a href="#header" class="link">
                     <img src="@/assets/header_logo.svg" alt="logo">
                 </a>
             </div>
@@ -11,7 +11,7 @@
                     <a 
                         v-for="(item, i) in navigation_links"
                         :key="i"
-                        class="navigation__link"
+                        class="navigation__link link"
                         :href="item.href">
                         {{$t(item.title)}}
                     </a>
@@ -60,7 +60,7 @@ export default {
         ...mapState(['language'])
     },
     mounted(){
-        anchor(".navigation__link", ".section");
+        anchor(".link");
     },
     methods: {
         setLanguage(){

@@ -1,5 +1,5 @@
 <template>
-    <div class="header-section">
+    <div class="header-section section">
         <div class="header">
             <div class="header__sphere">
                 <v-sphere></v-sphere>
