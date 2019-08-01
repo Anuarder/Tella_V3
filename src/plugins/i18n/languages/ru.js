@@ -163,23 +163,44 @@ export default {
     },
 
     team: {
-        out_team: `
+        title: `
             Наша 
             <span class='colored-text'>
                 команда
             </span>
         `,
-        data: {
-            shynggys: "Шынгыс",
-            kalybay: "Калыбай",
-            manager: "Проект менеджер",
-            dalen: "Дален",
-            ospanov: "Оспанов",
-            designer: "Chief Design Officer",
-            agzam: "Агзам",
-            yetekbay: "Етекбай",
-            technical_director: "Технический директор"
-        },
+        data: [
+            {
+                name: `
+                    <span class="colored-text">
+                        Шынгыс
+                    </span> 
+                    <br>
+                    Калыбай
+                `,
+                position: "Проект менеджер",
+            },
+            {
+                name: `
+                    <span class="colored-text">
+                        Дален
+                    </span> 
+                    <br>
+                    Оспанов
+                `,
+                position: "Chief Design Officer",
+            },
+            {
+                name: `
+                    <span class="colored-text">
+                        Агзам
+                    </span>
+                    <br>    
+                    Етекбай
+                `,
+                position: "Технический директор"
+            }
+        ],
     },
     
     meeting: {

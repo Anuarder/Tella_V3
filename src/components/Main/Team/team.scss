@@ -1,0 +1,128 @@
+@import "@/styles/variables.scss";
+
+.team{
+    margin-top: 15rem;
+    &__title{
+        @include title_style();
+    }
+    &__content{
+        margin-top: 5rem;
+        position: relative;
+        @include flex_center();
+        align-items: flex-end;
+    }
+    &__item{
+        height: 100%;
+        position: relative;
+        &:nth-child(1){
+            margin-right: -5rem;
+            .team__label{
+                top: 65%;
+            }
+        }
+        &:nth-child(2){
+            z-index: 2;
+            margin-right: -3rem;
+            .team__label{
+                top: 40%;
+            }
+        }
+        &:nth-child(3){
+            .team__label{
+                top: 45%;
+                right: 0;
+            }
+        }
+        &:hover{
+            .team__label{
+                transition: .2s;
+                transition-timing-function: ease-in-out;
+                opacity: 1;
+            }
+        }
+    }
+    &__label{
+        position: absolute;
+        padding: 2rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: black;
+        background-color: #fff;
+        opacity: 0;
+    }
+    &__position{
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        border-bottom: 1.5px solid black;
+        padding-bottom: .3rem;
+    }
+
+    &__slider{
+        @include slider_style();
+        margin-top: 2rem;
+    }
+    &__image{
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+    &__slider-item{
+        @include flex_vertical_center();
+        justify-content: flex-start;
+        .team__label{
+            top: 50%;
+            right: 10%;
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 901px){
+    .team{
+        &__label{
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+        &__position{
+            margin-top: .7rem;
+            font-size: .8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .team{
+        margin-top: 5rem;
+        &__slider{
+            margin-top: 2rem;
+        }
+        &__slider-item{
+            height: 700px;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .team{
+        &__slider{
+            margin-top: 1rem;
+        }
+        &__image{
+            width: 95%;
+        }
+        &__slider-item{
+            height: 500px;
+            .team__label{
+                right: 50%;
+                padding: 1rem;
+                font-size: 1.4rem;
+            }
+            .team__position{
+                margin-top: .7rem;
+                font-size: .8rem;
+            }
+        }
+    }
+}

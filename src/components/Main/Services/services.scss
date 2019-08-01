@@ -1,6 +1,5 @@
 @import "@/styles/variables.scss";
 
-
 .services{
     margin-top: 9rem;
     &__title{
@@ -9,14 +8,7 @@
         margin-left: 10rem;
     }
     &__slider{
-        display: flex;
-        overflow: hidden;
-        position: relative;
-        &-item{
-            position: relative;
-            transition: 0.4s ease-in-out;
-            min-width: 101%;
-        }
+        @include slider_style();
         &-container{
             @include flex_center();
             height: 100%;

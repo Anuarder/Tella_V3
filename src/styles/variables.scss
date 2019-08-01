@@ -26,6 +26,17 @@ $tella_green: #24F2AD;
 	}
 }
 
+@mixin slider_style() {
+	display: flex;
+    overflow: hidden;
+    position: relative;
+    &-item{
+        position: relative;
+        transition: 0.4s ease-in-out;
+        min-width: 101%;
+    }
+}
+
 @mixin flex_center() {
 	display: flex;
 	justify-content: center;

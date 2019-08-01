@@ -176,7 +176,7 @@ export default {
             technical_director: "Технический директор"
         },
     },
-    
+
     meeting: {
         title: `
             <span class='colored-text'>
@@ -195,7 +195,7 @@ export default {
             с политикой конфиденциальности.
         `
     },
-    
+
     request: {
         name: "Ваше имя",
         phone: "Номер телефона",

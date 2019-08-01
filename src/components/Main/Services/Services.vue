@@ -8,7 +8,7 @@
             <div class="services__slider">
                 <div 
                     class="services__slider-item"
-                    v-for="(item, i) in services_arr"
+                    v-for="(item, i) in services"
                     v-touch:swipe="swipeSlide"
                     :key="i"
                     :style="slide_transform">
@@ -41,6 +41,7 @@ import services_slider2 from "@/assets/services_slider2.png"
 import services_slider3 from "@/assets/services_slider3.png"
 import services_slider4 from "@/assets/services_slider4.png"
 export default {
+    
     data(){
         return{
             services: [
@@ -71,9 +72,6 @@ export default {
         }
     },
     computed: {
-        services_arr(){
-            return this.services;
-        },
         currentSlide(){
             return this.current_slide;
         }

@@ -17,6 +17,9 @@
             <div id="clients">
                 <v-clients></v-clients>
             </div>
+            <div id="team">
+                <v-team></v-team>
+            </div>
         </div>
     </div>
 </template>
@@ -28,6 +31,7 @@ import VAbout from "@/components/Main/About/About"
 import VServices from "@/components/Main/Services/Services"
 import VProjects from "@/components/Main/Projects/Projects"
 import VClients from "@/components/Main/Clients/Clients"
+import VTeam from "@/components/Main/Team/Team"
 export default {
     components: {
         VNavigation,
@@ -35,7 +39,8 @@ export default {
         VAbout,
         VServices,
         VProjects,
-        VClients
+        VClients,
+        VTeam
     }
 }
 </script>
