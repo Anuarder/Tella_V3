@@ -14,6 +14,9 @@
             <div id="projects">
                 <v-projects></v-projects>
             </div>
+            <div id="clients">
+                <v-clients></v-clients>
+            </div>
         </div>
     </div>
 </template>
@@ -24,13 +27,15 @@ import VHeader from "@/components/Main/Header/Header"
 import VAbout from "@/components/Main/About/About"
 import VServices from "@/components/Main/Services/Services"
 import VProjects from "@/components/Main/Projects/Projects"
+import VClients from "@/components/Main/Clients/Clients"
 export default {
     components: {
         VNavigation,
         VHeader,
         VAbout,
         VServices,
-        VProjects
+        VProjects,
+        VClients
     }
 }
 </script>

@@ -13,8 +13,7 @@
 .about{
     margin-top: 7rem;
     &__title{
-        font-size: 2.2rem;
-        text-align: center;
+        @include title_style();
     }
     &__items{
         margin-top: 7rem;
@@ -54,9 +53,6 @@
         margin-top: 1.35rem;
     }
     .about{
-        &__title{
-            font-size: 3rem;
-        }
         &__items{
             margin-top: 5rem;
         }
@@ -118,9 +114,6 @@
 
 @media screen and (max-width: 1300px) {
     .about{
-        &__title{
-            font-size: 2rem;
-        }
         &__item{
             margin-right: 4rem;
             img {
@@ -154,9 +147,6 @@
         margin-top: .5rem;
     }
     .about{
-        &__title{
-            font-size: 1.6rem;
-        }
         &__item{
             margin-right: 3rem;
             img {
@@ -179,10 +169,6 @@
         margin-top: 1.2rem;
     }
     .about{
-        &__title{
-            text-align: left;
-            font-size: 2rem;
-        }
         &__items{
             margin-top: 2rem;
             flex-direction: column;
@@ -224,10 +210,6 @@
         margin-top: .7rem;
     }
     .about{
-        &__title{
-            text-align: left;
-            font-size: 1.5rem;
-        }
         &__items{
             margin-top: 1rem;
         }
@@ -261,10 +243,6 @@
         margin-top: .7rem;
     }
     .about{
-        &__title{
-            text-align: left;
-            font-size: 1.4rem;
-        }
         &__items{
             margin-top: 1rem;
         }

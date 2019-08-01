@@ -153,11 +153,11 @@ export default {
         `,
     },
 
-    partners: {
+    clients: {
         title: `
             Наши 
             <span class='colored-text'>
-                партнеры
+                клиенты
             </span>
         `
     },

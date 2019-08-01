@@ -1,0 +1,45 @@
+@import "@/styles/variables.scss";
+
+.clients{
+    margin: 15rem 0;
+    &__title{
+        @include title_style();
+    }
+    &__content{
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: 7rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .clients{
+        margin: 10rem 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .clients{
+        margin: 10rem 0;
+        &__content{
+            max-width: 100%;
+            margin-top: 3rem;
+            grid-gap: 3rem;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .clients{
+        margin: 5rem 0;
+        &__content{
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 2rem;
+            grid-gap: 2rem;
+        }
+    }
+}

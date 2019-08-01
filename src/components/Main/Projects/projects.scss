@@ -140,6 +140,7 @@
 
 @media screen and (max-width: 1200px) {
     .projects{
+        margin: 7rem auto;
         &__title{
             font-size: 1.2rem;
             @include stick(8%, #fff);
@@ -165,7 +166,6 @@
 
 @media screen and (max-width: 900px) {
     .projects{
-        margin: 7rem auto;
         max-width: 95%;
         &__title{
             font-size: 1.2rem;
