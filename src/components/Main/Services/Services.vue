@@ -118,7 +118,7 @@ export default {
         setSliderInterval(){
             this.interval = setInterval(() => {
                 this.slide(1);
-            }, 5000);
+            }, 4000);
         }
     }
 }

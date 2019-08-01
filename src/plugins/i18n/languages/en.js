@@ -10,7 +10,7 @@ export default {
         about: "about",
         team: "team",
         contacts: "contacts",
-        portfolio: "projects",
+        projects: "projects",
     },
 
     header: {

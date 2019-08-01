@@ -10,7 +10,7 @@ export default {
         about: "о нас",
         team: "команда",
         contacts: "контакты",
-        portfolio: "портфолио",
+        projects: "портфолио",
     },
 
     header: {

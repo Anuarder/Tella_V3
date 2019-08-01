@@ -41,8 +41,8 @@ export default {
                     href: "#about"
                 },
                 {
-                    title: "navigation.portfolio",
-                    href: "#portfolio"
+                    title: "navigation.projects",
+                    href: "#projects"
                 },
                 {
                     title: "navigation.team",

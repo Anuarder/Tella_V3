@@ -24,6 +24,11 @@ $tella_green: #24F2AD;
 	justify-content: space-between;
 	align-items: center;
 }
+@mixin flex_vertical_between() {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
 @mixin flex_vertical_end(){
 	display: flex;
 	align-items: flex-end;

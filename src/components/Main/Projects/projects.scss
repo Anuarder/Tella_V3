@@ -1,1 +1,241 @@
 @import "@/styles/variables.scss";
+
+@mixin stick($width, $color){
+    font-weight: 600;
+    @include flex_vertical_center();
+    &::before{
+        content: "";
+        width: $width;
+        height: 2px;
+        background-color: $color;
+        margin-right: .6rem;
+    }
+}
+
+.projects{    
+    margin: 10rem auto;
+    max-width: 80%;
+    &__title{
+        font-size: 1.6rem;
+        @include stick(4%, #fff);
+    }
+    &__content{
+        margin-top: 3rem;
+        @include flex_center();
+    }
+    &__image{
+        position: relative;
+        overflow: hidden;
+        &:hover{
+            cursor: pointer;
+            .projects__image-label {
+                transition-timing-function: ease-in-out;
+                opacity: 1;
+                left: 0;
+            }
+        }
+        &-label{
+            @include flex_vertical_between();
+            transition: 0.5s;
+            transition-property: all;
+            position: absolute;
+            max-width: 90%;
+            height: 80%;
+            top: 50%;
+            left: -90%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            color: #272727;
+            box-shadow: 0px 2px 19px -8px rgba(0,0,0,0.75);
+            padding: 7%;
+            font-size: 1.2rem;
+            line-height: 200%;
+            font-weight: 600;
+            opacity: 0;
+        }
+        &-button{
+            cursor: pointer;
+            color: $tella_green;
+            font-weight: normal;
+            font-size: 95%;
+            a:hover{
+                transition: .1s;
+                border-bottom: 2px solid $tella_green;
+            }
+        }
+    }
+    &__serial-number{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        @include stick(8%, grey);
+        color: grey;
+    }
+    &__text{
+        h1{
+            font-size: 1.5rem;
+            line-height: 200%;
+        }
+        p{
+            font-size: .9rem;
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .projects{
+        &__image{
+            &-label{
+                font-size: 1.6rem;
+            }
+        }
+        &__serial-number{
+            font-size: 1.4rem;
+        }
+        &__text{
+            h1{
+                font-size: 1.7rem;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .projects{
+        &__title{
+            font-size: 1.4rem;
+            @include stick(6%, #fff);
+        }
+        &__image{
+            &-label{
+                font-size: 1rem;
+                line-height: 180%;
+            }
+        }
+        &__serial-number{
+            font-size: 1.1rem;
+        }
+        &__text{
+            h1{
+                font-size: 1.2rem;
+            }
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1400px) {
+    .projects{
+        &__image{
+            &-label{
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .projects{
+        &__title{
+            font-size: 1.2rem;
+            @include stick(8%, #fff);
+        }
+        &__image{
+            &-label{
+                font-size: .7rem;
+            }
+        }
+        &__serial-number{
+            font-size: .8rem;
+        }
+        &__text{
+            h1{
+                font-size: 1rem;
+            }
+            p{
+                font-size: .65rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .projects{
+        margin: 7rem auto;
+        max-width: 95%;
+        &__title{
+            font-size: 1.2rem;
+            @include stick(8%, #fff);
+        }
+        &__content{
+            margin-top: 1rem;
+            @include flex_center();
+            flex-direction: column;
+        }
+        &__item{
+            margin-top: 2rem;
+        }
+        &__image{
+            &-label{
+                font-size: 1.5rem;
+            }
+        }
+        &__serial-number{
+            font-size: 1.1rem;
+        }
+        &__text{
+            h1{
+                font-size: 1.6rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .projects{
+        margin: 5rem auto;
+        &__image{
+            &-label{
+                font-size: 1rem;
+            }
+        }
+        &__serial-number{
+            font-size: .9rem;
+        }
+        &__text{
+            h1{
+                font-size: 1.3rem;
+            }
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .projects{
+        &__image{
+            &-label{
+                font-size: .75rem;
+            }
+        }
+        &__serial-number{
+            font-size: .8rem;
+        }
+        &__text{
+            h1{
+                font-size: 1.2rem;
+            }
+            p{
+                font-size: .65rem;
+            }
+        }
+    }
+}
