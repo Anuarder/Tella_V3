@@ -61,6 +61,11 @@ $tella_green: #24F2AD;
 	}
 }
 
+@mixin language-switch_style() {
+	cursor: pointer;
+    user-select: none;
+}
+
 @mixin slider_style() {
 	display: flex;
     overflow: hidden;
