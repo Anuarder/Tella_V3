@@ -30,11 +30,13 @@
                     <br />
                     {{$t("header.text2")}}
                 </p>
-                <button class="header__button">
-                    <a href="#request">
+                <a 
+                    href="#meeting" 
+                    class="header__link">
+                    <button class="header__button">
                         {{$t("header.send_request")}}
-                    </a>
-                </button>
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -42,6 +44,7 @@
 <script>
 import "./header.scss"
 import VSphere from "@/components/Sphere/Sphere"
+import anchor from "@/plugins/AnchorTarget/Anchor"
 export default {
     components: {
         VSphere
@@ -53,6 +56,7 @@ export default {
     },
     mounted(){
         this.setTextAnimation();
+        anchor(".header__link");
     },
     methods: {
         setTextAnimation() {

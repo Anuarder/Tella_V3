@@ -1,0 +1,257 @@
+@import "@/styles/variables.scss";
+
+
+.contacts{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    @include flex_center();
+    &__title{
+        color: $tella_green;
+        font-size: 1.25rem;
+    }
+    &__subtitle{
+        font-size: 2.125rem;
+        line-height: 150%;
+    }
+    &__address-container{
+        margin-top: 2.5rem;
+        margin-right: 7rem;
+    }
+    &__address{
+        font-size: 1.3rem;
+        line-height: 160%;
+        p{
+            font-style: italic;
+            color: rgba(#fff, .9);
+        }
+        &:last-child{
+            margin-top: 2rem;
+        }
+    }
+    &__links{
+        margin-top: 2rem;
+    }
+    &__link{
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        img{
+            max-width: 1.8rem;
+        }
+        a{
+            margin-right: .9rem;
+        }
+    }
+    &__map-container{
+        width: 55rem;
+        height: 35rem;
+    }
+    &__map{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .contacts{
+        &__address-container{
+            margin-top: 2rem;
+            margin-right: 4.5rem;
+        }
+        &__map-container{
+            width: 50rem;
+            height: 30rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .contacts{
+        &__title{
+            font-size: 1.1rem;
+        }
+        &__subtitle{
+            font-size: 2rem;
+        }
+        &__address-container{
+            margin-top: 1.5rem;
+            margin-right: 4rem;
+        }
+        &__address{
+            font-size: 1.1rem;
+            &:last-child{
+                margin-top: 1.5rem;
+            }
+        }
+        &__link{
+            font-size: 1.2rem;
+            img{
+                max-width: 1.5rem;
+            }
+        }
+        &__map-container{
+            width: 45rem;
+            height: 25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .contacts{
+        &__title{
+            font-size: 1rem;
+        }
+        &__subtitle{
+            font-size: 1.7rem;
+        }
+        &__address-container{
+            margin-top: 1rem;
+            margin-right: 3rem;
+        }
+        &__address{
+            font-size: 1rem;
+        }
+        &__link{
+            font-size: 1.1rem;
+            img{
+                max-width: 1.3rem;
+            }
+        }
+        &__map-container{
+            width: 40rem;
+            height: 23rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contacts{
+        &__title{
+            font-size: 1rem;
+        }
+        &__subtitle{
+            font-size: 1.7rem;
+        }
+        &__address{
+            font-size: .9rem;
+        }
+        &__link{
+            font-size: 1rem;
+            img{
+                max-width: 1.1rem;
+            }
+            a{
+                margin-right: .6rem;
+            }
+        }
+        &__map-container{
+            width: 35rem;
+            height: 20rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .contacts{
+        &__map-container{
+            width: 30rem;
+            height: 18rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contacts{
+        &__title{
+            font-size: .9rem;
+        }
+        &__subtitle{
+            font-size: 1.5rem;
+        }
+        &__address{
+            font-size: .7rem;
+        }
+        &__link{
+            font-size: .9rem;
+        }
+        &__map-container{
+            width: 25rem;
+            height: 18rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contacts{
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        &__title{
+            font-size: 1rem;
+        }
+        &__subtitle{
+            font-size: 2rem;
+        }
+        &__address-container{
+            margin-top: 1.5rem;
+            margin-right: 0;
+        }
+        &__address{
+            font-size: 1.3rem;
+            &:last-child{
+                margin-top: 1.5rem;
+            }
+        }
+        &__links{
+            margin-top: 1.5rem;
+        }
+        &__link{
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            img{
+                max-width: 1.5rem;
+            }
+        }
+        &__map-container{
+            margin-top: 2rem;
+            width: 100%;
+            height: 20rem;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .contacts{
+        margin-top: 4rem;
+        &__title{
+            font-size: .8rem;
+        }
+        &__subtitle{
+            font-size: 1.7rem;
+        }
+        &__address-container{
+            margin-top: 1.2rem;
+        }
+        &__address{
+            font-size: 1.1rem;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .contacts{
+        &__subtitle{
+            font-size: 1.4rem;
+        }
+        &__address-container{
+            margin-top: .8rem;
+        }
+        &__address{
+            font-size: .9rem;
+        }
+        &__link{
+            font-size: 1rem;
+            img{
+                max-width: 1.3rem;
+            }
+        }
+    }
+}

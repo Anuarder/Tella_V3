@@ -23,6 +23,9 @@
             <div id="meeting">
                 <v-meeting></v-meeting>
             </div>
+            <div id="contacts">
+                <v-contacts></v-contacts>
+            </div>
         </div>
     </div>
 </template>
@@ -36,6 +39,7 @@ import VProjects from "@/components/Main/Projects/Projects"
 import VClients from "@/components/Main/Clients/Clients"
 import VTeam from "@/components/Main/Team/Team"
 import VMeeting from "@/components/Main/Meeting/Meeting"
+import VContacts from "@/components/Main/Contacts/Contacts"
 export default {
     components: {
         VNavigation,
@@ -45,7 +49,8 @@ export default {
         VProjects,
         VClients,
         VTeam,
-        VMeeting
+        VMeeting,
+        VContacts
     }
 }
 </script>
