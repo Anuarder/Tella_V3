@@ -33,9 +33,9 @@
 </template>
 <script>
 import "./about.scss"
-import technology_image from "@/assets/about-icon_technology.svg"
-import principle_image from "@/assets/about-icon_principle.svg"
-import assurance_image from "@/assets/about-icon_quality.svg"
+import technology_image from "@/assets/about-icon_technology.png"
+import principle_image from "@/assets/about-icon_principle.png"
+import assurance_image from "@/assets/about-icon_quality.png"
 export default {
     data(){
         return{

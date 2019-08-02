@@ -35,13 +35,8 @@
         }
     }
     &__button{
-        cursor: pointer;
-        @include input_reset();
         margin-top: 2rem;
-        font-size: 1.2rem;
-        padding: 1.1rem 2rem;
-        border: 1px solid $tella_green;
-        color: $tella_green;
+        @include button_style();
     }
 }
 
@@ -81,8 +76,6 @@
         }
         &__button{
             margin-top: 1rem;
-            font-size: 1.1rem;
-            padding: .9rem 1.8rem;
         }
     }
 }
@@ -92,10 +85,6 @@
         &__text{
             font-size: 1.3rem;
         }
-        &__button{
-            font-size: 1rem;
-            padding: .8rem 1.5rem;
-        }
     }
 }
 
@@ -104,9 +93,6 @@
         &__text{
             font-size: 1.2rem;
         }
-        &__button{
-            font-size: .8rem;
-        }
     }
 }
 
@@ -114,9 +100,6 @@
     .header{
         &__text{
             font-size: 1rem;
-        }
-        &__button{
-            font-size: .8rem;
         }
     }
 }
@@ -134,8 +117,6 @@
         }
         &__button{
             margin-top: 1.5rem;
-            font-size: 1rem;
-            padding: 1.1rem 2rem;
         }
     }
 }
@@ -149,11 +130,6 @@
             p {
                 line-height: 170%;
             }
-        }
-        &__button{
-            font-size: .8rem;
-            padding: 1.2rem 1.7rem;
-            width: 100%;
         }
     }
 }

@@ -48,6 +48,13 @@ body {
     border-bottom: 2px solid $tella_green;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 button,
 a,
 input,

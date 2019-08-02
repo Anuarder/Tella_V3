@@ -1,1 +1,313 @@
 @import "@/styles/variables.scss";
+
+.meeting{
+    margin-top: 15rem;
+    &__title{
+        @include title_style();
+    }
+    &__subtitle{
+        margin-top: 5rem;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    &__content{
+        margin-top: 4rem;
+    }
+    &__items{
+        @include flex_center();
+    }
+    &__item{
+        margin-right: 10rem;
+        &:last-child{
+            margin-right: 0;
+        }
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        text-align: center;
+        img{
+            align-self: end;
+        }
+        h1{
+            margin-top: 2rem;
+            line-height: 140%;
+            font-size: 1.25rem;
+            font-weight: normal;
+        }
+    }
+    &__request{
+        margin-top: 5rem;
+        text-align: center;
+        h1{
+            font-size: 1.8rem;
+            font-weight: normal;
+        }
+        h2{
+            margin-top: 1.5rem;
+            font-size: .8rem;
+            font-weight: normal;
+        }
+    }
+    &__form{
+        margin-top: 2rem;
+        @include flex_center();
+        button{
+            @include button_style();
+            margin-left: 2rem;
+        }
+    }
+    &__input{
+        position: relative;
+        input{
+            @include input_reset();
+            background-color: #fff;
+            color: black;
+            height: 60px;
+            padding: 0 1rem;
+            width: 300px;
+        }
+        &:first-child{
+            &:after{
+                content: "";
+                width: 1px;
+                background-color:black;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 70%;
+                position: absolute;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .meeting{
+        &__subtitle{
+            font-size: 1.4rem;
+        }
+        &__item{
+            h1{
+                font-size: 1.4rem;
+            }
+        }
+        &__request{
+            h1{
+                font-size: 1.9rem;
+            }
+            h2{
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .meeting{
+        &__input{
+            input{
+                height: 55px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1299px) {
+    .meeting{
+        &__item{
+            margin-right: 8rem;
+            h1{
+                font-size: 1.1rem;
+            }
+        }
+        &__input{
+            input{
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .meeting{
+        margin-top: 10rem;
+        &__subtitle{
+            margin-top: 3rem;
+            font-size: 1.1rem;
+        }
+        &__item{
+            margin-right: 8rem;
+            h1{
+                font-size: 1rem;
+            }
+        }
+        &__request{
+            margin-top: 4rem;
+            h1{
+                font-size: 1.5rem;
+            }
+            h2{
+                font-size: .7rem;
+            }
+        }
+        &__input{
+            input{
+                height: 40px;
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .meeting{
+        margin-top: 7rem;
+        &__title{
+            text-align: center;
+        }
+        &__subtitle{
+            font-size: 1rem;
+        }
+        &__request{
+            margin-top: 3rem;
+            h1{
+                font-size: 1.4rem;
+            }
+            h2{
+                font-size: .6rem;
+            }
+        }
+        &__form{
+            button{
+                margin-left: 1rem;
+                width: 150px;
+                font-size: .9rem;
+            }
+        }
+        &__input{
+            input{
+                height: 50px;
+                width: 230px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .meeting{
+        margin-top: 5rem;
+        &__title{
+            font-size: 1.5rem;
+            text-align: left;
+        }
+        &__subtitle{
+            margin-top: 2rem;
+            text-align: left;
+            font-size: 1.3rem;
+        }
+        &__content{
+            margin-top: 2rem;
+        }
+        &__items{
+            @include flex_center();
+            justify-content: space-between;
+        }
+        &__item{
+            margin-right: 0;
+            img{
+                align-self: end;
+                max-width: 50%;
+            }
+            h1{
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
+        }
+        &__form{
+            margin-top: 1rem;
+            flex-direction: column;
+            button{
+                @include button_style();
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+        &__input{
+            width: 100%;
+            margin-top: 1rem;
+            input{
+                height: 60px;
+                width: 100%;
+            }
+            &:first-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .meeting{
+        &__subtitle{
+            margin-top: 2rem;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        &__request{
+            margin-top: 3rem;
+            h1{
+                font-size: 1.2rem;
+            }
+            h2{
+                font-size: .5rem;
+            }
+        }
+        &__item{
+            h1{
+                margin-top: 1rem;
+                font-size: .8rem;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .meeting{
+        margin-top: 3rem;
+        &__subtitle{
+            margin-top: 2rem;
+            text-align: left;
+            font-size: .8rem;
+        }
+        &__request{
+            margin-top: 2rem;
+            h1{
+                font-size: 1rem;
+            }
+            h2{
+                font-size: .5rem;
+            }
+        }
+        &__form{
+            button{
+                height: 50px;
+                font-size: .9rem;
+            }
+        }
+        &__item{
+            h1{
+                margin-top: 1rem;
+                font-size: .6rem;
+            }
+        }
+        &__input{
+            margin-top: .5rem;
+            input{
+                height: 50px;
+            }
+        }
+    }
+}
