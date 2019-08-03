@@ -18,7 +18,7 @@
                 </div>
                 <div 
                     class="navigation__language-switch"
-                    @click="setLanguage">
+                    @click="clickLanguage">
                     {{lang}}
                 </div>
             </div>
@@ -43,7 +43,6 @@ export default {
     },
     data(){
         return{
-            lang: "eng",
             sidebar: false,
         }
     }

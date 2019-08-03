@@ -1,4 +1,4 @@
-import { mapState } from "vuex"
+// import { mapState } from "vuex"
 import anchor from "@/plugins/AnchorTarget/Anchor"
 export default {
     data(){
@@ -24,27 +24,49 @@ export default {
             lang: "eng",
         }
     },
-    computed: {
-        ...mapState(['language'])
-    },
     mounted(){
         anchor(".link");
     },
     beforeDestroy(){
        this.body.className = ""; 
     },
+    created(){
+        this.loadLanguage(localStorage.getItem('lang'));
+    },
     methods: {
-        setLanguage(){
+        setLanguage(value){
+            localStorage.setItem('lang', value);
+            this.$i18n.locale = value;
+        },
+        loadLanguage(value){
+            if(value){
+                if(value == "en"){
+                    this.lang = "рус";
+                }else{
+                    this.lang = "eng"
+                }
+                this.setLanguage(value);
+            }else{
+                const userLang = navigator.language || navigator.userLanguage; 
+                let lang = null;
+                if(userLang == "ru-RU"){
+                    lang = "ru";
+                }else{
+                    lang = "en";
+                }
+                this.setLanguage(lang);
+            }
+        },
+        clickLanguage(){
             let language_value = "ru";
-            if(this.language == "ru"){
-                this.lang = "рус"
+            if(this.lang == "eng"){
+                this.lang = "рус";
                 language_value = 'en';
             }else{
                 this.lang = "eng"
                 language_value = 'ru'
             }
-            this.$store.commit('setLanguage', language_value);
-            this.$i18n.locale = language_value;
-        },
+            this.setLanguage(language_value);
+        }
     }
 }

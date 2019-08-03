@@ -27,7 +27,7 @@
                 </div>
                 <div 
                     class="sidebar__language-switch"
-                    @click="setLanguage">
+                    @click="clickLanguage">
                     {{lang}}
                 </div>
             </div>
