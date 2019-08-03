@@ -56,24 +56,18 @@ import "./team.scss"
 import Shyngys from "@/assets/Shyngys.png"
 import Dalen from "@/assets/Dalen.png"
 import Agzam from "@/assets/Agzam.png"
-import shyngys_slider from "@/assets/shyngys_slider.png"
-import dalen_slider from "@/assets/dalen_slider.png"
-import agzam_slider from "@/assets/agzam_slider.png"
 export default {
     data(){
         return{
             team: [
                 {
                     image: Shyngys,
-                    image_slider: shyngys_slider,
                 },
                 {
                     image: Dalen,
-                    image_slider: dalen_slider,
                 },
                 {
                     image: Agzam,
-                    image_slider: agzam_slider,
                 }
             ],
             window_width: window.innerWidth,

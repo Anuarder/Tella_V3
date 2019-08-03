@@ -41,8 +41,8 @@
 <script>
 import "./projects.scss"
 import gornoesolnce_preview from "@/assets/gornoesolnce_preview.jpg"
-import mobilex_preview from "@/assets/mobilex_preview.png"
-import dimashtea_preview from "@/assets/dimashtea_preview.png"
+import mobilex_preview from "@/assets/mobilex_preview.jpg"
+import dimashtea_preview from "@/assets/dimashtea_preview.jpg"
 export default {
     data(){
         return{
