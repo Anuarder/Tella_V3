@@ -77,6 +77,14 @@ $tella_green: #24F2AD;
     }
 }
 
+@mixin link_animation(){
+    animation-name: showRight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    @content;
+}
+
 @mixin flex_center() {
 	display: flex;
 	justify-content: center;

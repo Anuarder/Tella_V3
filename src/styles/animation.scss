@@ -1,0 +1,34 @@
+
+
+@keyframes showSidebar {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: 100vh;
+    }
+}
+
+@keyframes hideSidebar {
+    from {
+        opacity: 1;
+        height: 100vh;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@keyframes showRight {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

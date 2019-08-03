@@ -1,4 +1,5 @@
 @import "@/styles/variables.scss";
+@import "@/styles/animation.scss";
 
 .app-page{
     position: relative;
@@ -9,7 +10,6 @@
     max-width: 2560px;
     margin: 0 auto;
 }
-
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .app-page{

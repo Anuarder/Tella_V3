@@ -25,7 +25,7 @@ export default {
         }
     },
     mounted(){
-        anchor(".link");
+        anchor(".link", ".section");
     },
     beforeDestroy(){
        this.body.className = ""; 

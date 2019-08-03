@@ -1,5 +1,9 @@
 @import "@/styles/variables.scss";
 
+.hide-sidebar{
+    animation: hideSidebar .4s ease-in-out;
+    animation-fill-mode: both;
+}
 
 .sidebar{
     background-color: #fff;
@@ -8,9 +12,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    min-height: 100vh;
+    height: 0;
     z-index: 20;
     color: black;
+    animation: showSidebar .5s ease-in-out;
+    animation-fill-mode: both;
     &__header{
         @include flex_horizontal_between();
         padding: 2.5rem;
@@ -38,14 +44,23 @@
         &:first-child{
             margin-top: 0;
         }
+        @include link_animation(){
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * (3s / 15);
+                }
+            }
+        }
     }
     &__language-switch{
         margin-top: 2rem;
         font-size: 1.5rem;
         @include language-switch_style();
+        @include link_animation(){
+            animation-delay: .6s;
+        }
     }
 }
-
 
 @media screen and (max-width: 767px) {
     .sidebar{

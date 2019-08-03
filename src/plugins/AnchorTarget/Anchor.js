@@ -1,6 +1,6 @@
 import $ from "jquery"
 
-export default (anchor) => {
+export default (anchor, section) => {
     $(document).ready(function() {
         // go to section when click anchor
         $(anchor).bind('click', function(e){
@@ -14,16 +14,16 @@ export default (anchor) => {
             return false;
         });
         // Change active on target
-        // $(window).scroll(function() {
-        //     let scrollDistance = $(window).scrollTop();
-        //     // Assign active class to nav links while scolling
-        //     $(section).each(function(i) {
-        //         if (($(this).position().top - 400) <= scrollDistance) {
-        //             $(`${anchor}.active`).removeClass('active');
-        //             $(anchor).eq(i).addClass('active');
-        //         }
-        //     });
-        // }).scroll();
+        $(window).scroll(function() {
+            let scrollDistance = $(window).scrollTop();
+            // Assign active class to nav links while scolling
+            $(section).each(function(i) {
+                if (($(this).position().top - 400) <= scrollDistance) {
+                    $(`${anchor}.active`).removeClass('active');
+                    $(anchor).eq(i).addClass('active');
+                }
+            });
+        }).scroll();
     })
     
 }

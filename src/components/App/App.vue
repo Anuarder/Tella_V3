@@ -5,22 +5,22 @@
             <div id="header">
                 <v-header></v-header>
             </div>
-            <div id="about">
+            <div id="about" class="section">
                 <v-about></v-about>
             </div>
-            <div id="services">
+            <div id="services" >
                 <v-services></v-services>
             </div>
-            <div id="projects">
+            <div id="projects" class="section">
                 <v-projects></v-projects>
             </div>
             <div id="clients">
                 <v-clients></v-clients>
             </div>
-            <div id="team">
+            <div id="team" class="section">
                 <v-team></v-team>
             </div>
-            <div id="meeting">
+            <div id="meeting" class="section">
                 <v-meeting></v-meeting>
             </div>
             <div id="contacts">

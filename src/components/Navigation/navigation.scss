@@ -12,6 +12,11 @@
 .navigation{
     @include flex_horizontal_between();
     padding: 2.5rem;
+    &__logo{
+        a{
+            border: none !important;
+        }
+    }
     &__actions{
         @include flex_vertical_center();
         font-size: 1.1rem;
