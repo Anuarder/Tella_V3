@@ -235,7 +235,11 @@ export default {
             name: "Ваше имя",
             phone: "Номер телефона",
             button: "Узнать больше",
-            loading: "Загрузка..."
+            loading: "Загрузка...",
+            success: "Успешно",
+            success_message: "С вами свяжутся в ближайшее время!",
+            error: "Ошибка",
+            error_message: "Что то пошло не так!"
         }
     },
 
