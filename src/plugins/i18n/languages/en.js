@@ -1,8 +1,8 @@
 export default {
     preloader: {
-        good_morning: "Доброе утро",
-        good_afternoon: "Добрый день",
-        good_evening: "Добрый вечер",
+        good_morning: "Good morning",
+        good_afternoon: "Good afternoon",
+        good_evening: "Good evening",
     },
     
     navigation: {
@@ -15,190 +15,187 @@ export default {
 
     header: {
         text1: `
-            <strong> TELLA </strong> - комплексная 
-            веб-студия полного цикла. <br>
-            Специализируемся на
+            <strong> TELLA </strong> - is a 
+            full cycle web studio <br>
+            Specialising in
         `,
-        text2: "под любые запросы Вашего бизнеса.",
-        design: "продуктовом дизайне",
-        site: "продающих сайтах",
-        marketion: "digital маркетинге",
-        mobile: "мобильных приложениях",
-        send_request: "Отправить заявку"
+        text2: "for any of your business demands.",
+        design: "product design",
+        site: "web development",
+        marketion: "digital marketing",
+        mobile: "mobile applications",
+        send_request: "Send request"
     },
 
     about: {
         title: `
-            3 главных 
+            The 3 main
             <span class='colored-text'>
-                преимущества
+                benefits
             </span>
         `,
         data: {
             technology: {
-                title: "Лидер технологий",
-                text1: "Первые, кто верстает на чистом коде vue.js",
-                text2: "Сверхбыстрая загрузка сайта",
-                text3: "Защита от копирования"
+                title: "Leading technologies",
+                text1: "First dev-team who develops on Vue.js",
+                text2: "Optimised website loading",
+                text3: "Anti-theft built-in system"
             },
             principle: {
-                title: "Принцип Win - Win",
-                text1: "Помогаем с первичными обработками заявок",
-                text2: "Мы заинтересованы, чтобы Вы продавали",
-                text3: "больше и лучше"
+                title: "Win-Win Principle",
+                text1: "Support with initial incoming requests",
+                text2: "We are interested in helping you sell",
+                text3: "better and more"
             },
             assurance: {
-                title: "Гарантия качества",
-                text1: "Поддержка и сопровождения сайта",
-                text2: "Качественная проработка этапов проекта",
-                text3: "Гарантия результата и выполненных работ",
+                title: "Quality Guarantee",
+                text1: "Project technical support",
+                text2: "Quality management of project timeline",
+                text3: "Cost-effective product outcome",
             }
         }
     },
 
     services: {
         title: `
-            Наши 
+            Our 
             <span class='colored-text'>
-                комплексные услуги
+                comprehensive services
             </span> 
-            позволят Вам
+            allow you
         `,
         slider1: {
             title: `
-                Заявить о товаре/услуге <br>
+                Report a product/service <br>
                 <span class='colored-text'>
-                    на весь рынок
+                    to the entire market
                 </span>
             `,
             text: `
-                Совсем недавно открыли 
-                свой бизнес и желаете, <br> 
-                чтобы о Вашем товаре/услуге все узнали? 
+                Just recently opened 
+                your business and wish, <br> 
+                so that everyone knows about your product/service? <br>
                 <span class='colored-text'> 
-                    <br>
-                    Мы сделаем это и Вас узнают тысячи людей!
+                    We will do it and thousands of people will recognize you!
                 </span>`
         },
         slider2: {
             title: `
                 <span class='colored-text'>
-                    Увеличить
+                    Increase
                 </span> 
-                продажи
+                sales
             `,
             text: `
-                Получайте только целевых клиентов. <br> 
-                Продающая структура посадочных страниц.<br> 
-                Увеличение прибыли бизнеса в несколько раз! 
+                Create a site that will sell and work for you. <br> 
+                Everything according to the laws of marketing <br> 
+                psychology is a unique design, selling texts, <br>
+                detailed study of the target audience. <br>
                 <span class='colored-text'> 
-                    <br>
-                    Клиенты сами будут идти к Вам!
+                    Customers themselves will go to you!
                 </span>`
         },
         slider3: {
             title: `
-                Сократить время на <br> 
+                Reduce time to <br> 
                 <span class='colored-text'>
-                    привлечение клиентов
+                    attract customers
                 </span>
             `,
             text: `
-                Вы занимаетесь бизнесом и 
-                его масштабированием, <br> 
-                а мы обеспечиваем Вас огромным 
-                потоком клиентов. 
+                Just recently opened your 
+                own business and wish, <br> 
+                that everyone should find out 
+                about your product/service? <br>
                 <span class='colored-text'>
-                    <br>
-                    Мы сделаем это и Вас узнают тысячи людей!
+                    We will do it and thousands of people will recognize you!
                 </span>
             `
         },
         slider4: {
             title: `
                 <span class='colored-text'>
-                    Уменьшить расходы
+                    Reduce advertising
                 </span> 
-                на <br> рекламу и продвижение
+                <br> and promotion costs.
             `,
             text: `
-                Проработанная 
-                настройка рекламы позволит <br> 
-                окупить рекламные бюджеты уже 
-                через 2-3 месяца. 
+                Detailed tuning of 
+                advertising will allow <br> 
+                to recoup advertising budgets in 2-3 months. <br>
                 <span class='colored-text'>
-                    <br>
-                    Вы не сможете противостоять росту Вашей прибыли!
+                    You can not resist the growth of your profits!
                 </span>`
         }
     },
 
     projects: {
-        title: "ПОРТФОЛИО",
-        go_to_site: "Перейти на сайт",
-        in_developing: "В разработке",
+        title: "PROJECTS",
+        go_to_site: "Go to the website",
+        in_developing: "In developing",
         gornoesolnce: `
-            Разработка сайта 
-            для премиального жилого 
-            комплекса в Алматы
+            Site development for a 
+            premium class apartment 
+            complex in Almaty.
         `,
         ddpartnership: `
-            Разработка интернет-магазина 
-            с киберспортивной периферией
+            Site development for a 
+            cybersport peripherals 
+            online store.
         `,
         dimashtea: `
-            Разработка интернет-магазина 
-            для всемирно-известного певца, 
-            Димаш Құдайберген
+            Site development for 
+            world-famous singer, 
+            Dimash Kudaibergen.
         `,
     },
 
     clients: {
         title: `
-            Наши 
+            Our 
             <span class='colored-text'>
-                клиенты
+                clients
             </span>
         `
     },
 
     team: {
         title: `
-            Наша 
+            Our 
             <span class='colored-text'>
-                команда
+                team
             </span>
         `,
         data: [
             {
                 name: `
                     <span class="colored-text">
-                        Шынгыс
+                        Shynggys
                     </span> 
                     <br>
-                    Калыбай
+                    Kalybay
                 `,
-                position: "Проект менеджер",
+                position: "Project manager",
             },
             {
                 name: `
                     <span class="colored-text">
-                        Дален
+                        Dalen
                     </span> 
                     <br>
-                    Оспанов
+                    Ospanov
                 `,
                 position: "Chief Design Officer",
             },
             {
                 name: `
                     <span class="colored-text">
-                        Агзам
+                        Agzam
                     </span>
                     <br>    
-                    Етекбай
+                    Yetekbay
                 `,
-                position: "Технический директор"
+                position: "Technical director"
             }
         ],
     },
@@ -206,51 +203,52 @@ export default {
     meeting: {
         title: `
             <span class='colored-text'>
-                Все еще
+                Still in
             </span> 
-            сомневатесь?
+            doubt?
         `,
-        subtitle: "Потратив 30 минут на живую встречу Вы получите:",
+        subtitle: "Spending 30 minutes on a live meeting you will receive:",
         text1: `
-            экспресс-аудит <br>
-            Вашей ниши
+            express audit <br>
+            of your niche
         `,
         text2: `
-            стратегию <br>
-            продвижения в <br>
-            сети Интернет
+            Internet <br>
+            promotion strategy
         `,
         text3: `
-            и с огромной <br>
-            вероятностью - <br>
-            продающий сайт
+            and most likely <br>
+            a selling site
         `,
-        form_title: "Будьте на шаг впереди Ваших конкурентов!",
+        form_title: "Stay one step ahead of the competition!",
         warning: `
-            *Нажимая на кнопку, вы даете согласие на 
-            обработку персональных данных и соглашаетесь 
-            с политикой конфиденциальности.
+            *By pressing the button 
+            you agree to processing of 
+            your personal data and agree 
+            with our privacy policy.
         `,
         request: {
-            name: "Ваше имя",
-            phone: "Номер телефона",
-            button: "Узнать больше",
-            loading: "Загрузка...",
-            success: "Успешно",
-            success_message: "С вами свяжутся в ближайшее время!",
-            error: "Ошибка",
-            error_message: "Что то пошло не так!"
+            name: "Name",
+            phone: "Phone",
+            button: "Send",
+            loading: "Loading...",
+            success: "Thank you very much!",
+            success_message: "We've received your request",
+            error: "Error",
+            error_message: "Something went wrong!",
+            warning: "Check the data!",
+            warning_message: "Invalid phone format"
         }
     },
 
     contacts: {
-        title: "Контакты",
-        subtitle: "Давайте общаться",
-        city: "Алматы",
-        city2: "Гонконг",
+        title: "Contacts",
+        subtitle: "Let's talk",
+        city: "Almaty",
+        city2: "Hongong",
         address: `
-            Проспект Аль-Фараби 144, <br>
-            ЖК "Горное Солнце", офис 46-47 <br>
+            Al-Farabi Avenue 144, <br>
+            of. 46 - 47 <br>
         `,
     }
 }

@@ -29,12 +29,17 @@
                         <div class="meeting__input">
                             <input 
                                 type="text" 
-                                :placeholder="$t('meeting.request.name')">
+                                :placeholder="$t('meeting.request.name')"
+                                v-model="name"
+                                required>
                         </div>
                         <div class="meeting__input">
                             <input 
-                                type="number"
-                                :placeholder="$t('meeting.request.phone')">
+                                type="text"
+                                :placeholder="$t('meeting.request.phone')"
+                                v-model="phone"
+                                v-mask="'# ###-###-##-##'"
+                                required>
                         </div>
                         <button :disabled="isLoading">
                             <span v-if="isLoading">
@@ -77,8 +82,11 @@ export default {
             name: "",
             phone: "",
             isLoading: false,
-            context: "https://api.tella.kz/api"
+            context: process.env.NODE_ENV == "development" ? process.env.VUE_APP_DEV_CONTEXT : ""
         }
+    },
+    created(){
+        this.getContext();
     },
     methods: {
         async sendRequest(){
@@ -86,34 +94,41 @@ export default {
                 let data = {
                     name: this.name,
                     phone: this.phone,
-                    utm_params: null
                 };
-                this.isLoading = true;
-                let utm_params = new URLSearchParams(window.location.search);
-                if(utm_params.has('utm_source')){
-                    data.utm_params = {
-                        utm_source: utm_params.get('utm_source'),
-                        utm_medium: utm_params.get('utm_medium'),
-                        utm_campaign: utm_params.get('utm_campaign'),
-                        utm_content: utm_params.get('utm_content'),
-                        utm_term: utm_params.get('utm_term'),
-                    }
-                }
-                let response = await axios.post(`${this.context}/notification/send`, data);
-                console.log(response);
-                if(response.data.status == 'notification_was_sended'){
-                    this.isLoading = false;
+                if(data.phone.length < 15){
                     swal(
-                        this.$t("meeting.request.success"), 
-                        this.$t("meeting.request.success_message"), 
-                        "success"
+                        this.$t("meeting.request.warning"), 
+                        this.$t("meeting.request.warning_message"), 
+                        "warning"
                     );
-                    this.name = '';
-                    this.phone = '';
-                    // eslint-disable-next-line
-                    dataLayer.push({'event': 'request_success'});
                 }else{
-                    throw "Error";
+                    this.isLoading = true;
+                    let utm_params = new URLSearchParams(window.location.search);
+                    if(utm_params.has('utm_source')){
+                        data.utm_params = {
+                            utm_source: utm_params.get('utm_source'),
+                            utm_medium: utm_params.get('utm_medium'),
+                            utm_campaign: utm_params.get('utm_campaign'),
+                            utm_content: utm_params.get('utm_content'),
+                            utm_term: utm_params.get('utm_term'),
+                        }
+                    }
+
+                    let response = await axios.post(`${this.context}/notification/send`, data);
+                    if(response.data.status == 'notification_was_sended'){
+                        this.isLoading = false;
+                        swal(
+                            this.$t("meeting.request.success"), 
+                            this.$t("meeting.request.success_message"), 
+                            "success"
+                        );
+                        this.name = '';
+                        this.phone = '';
+                        // eslint-disable-next-line
+                        dataLayer.push({'event': 'request_success'});
+                    }else{
+                        throw "Error";
+                    }
                 }
             }catch(err){
                 this.isLoading = false;
@@ -122,6 +137,14 @@ export default {
                     this.$t("meeting.request.error_message"), 
                     "error"
                 );
+            }
+        },
+        async getContext(){
+            try{
+                let response = await axios.get('/api/getContext.php');
+                this.context = response.data;
+            }catch(err){
+                console.log(err);
             }
         }
     }

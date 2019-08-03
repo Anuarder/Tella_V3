@@ -31,26 +31,17 @@
 </template>
 <script>
 import "./app.scss"
-import VNavigation from "@/components/Navigation/Navigation"
-import VHeader from "@/components/Main/Header/Header"
-import VAbout from "@/components/Main/About/About"
-import VServices from "@/components/Main/Services/Services"
-import VProjects from "@/components/Main/Projects/Projects"
-import VClients from "@/components/Main/Clients/Clients"
-import VTeam from "@/components/Main/Team/Team"
-import VMeeting from "@/components/Main/Meeting/Meeting"
-import VContacts from "@/components/Main/Contacts/Contacts"
 export default {
     components: {
-        VNavigation,
-        VHeader,
-        VAbout,
-        VServices,
-        VProjects,
-        VClients,
-        VTeam,
-        VMeeting,
-        VContacts
+        VNavigation: () => import("@/components/Navigation/Navigation"),
+        VHeader: () => import("@/components/Main/Header/Header"),
+        VAbout: () => import("@/components/Main/About/About"),
+        VServices: () => import("@/components/Main/Services/Services"),
+        VProjects: () => import("@/components/Main/Projects/Projects"),
+        VClients: () => import("@/components/Main/Clients/Clients"),
+        VTeam: () => import("@/components/Main/Team/Team"),
+        VMeeting: () => import("@/components/Main/Meeting/Meeting"),
+        VContacts: () => import("@/components/Main/Contacts/Contacts")
     }
 }
 </script>

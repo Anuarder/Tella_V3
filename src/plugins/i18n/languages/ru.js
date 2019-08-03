@@ -236,10 +236,12 @@ export default {
             phone: "Номер телефона",
             button: "Узнать больше",
             loading: "Загрузка...",
-            success: "Успешно",
+            success: "Спасибо за заявку",
             success_message: "С вами свяжутся в ближайшее время!",
             error: "Ошибка",
-            error_message: "Что то пошло не так!"
+            error_message: "Что то пошло не так!",
+            warning: "Проверьте данные!",
+            warning_message: "Введен неверный формат телефона"
         }
     },
 

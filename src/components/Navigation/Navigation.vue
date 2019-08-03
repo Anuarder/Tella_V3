@@ -29,7 +29,10 @@
                     @click="sidebar = true">
             </div>
         </div>
-        <v-sidebar v-if="sidebar" @close="sidebar = false"></v-sidebar>
+        <v-sidebar 
+            v-if="sidebar" 
+            @close="sidebar = false">
+        </v-sidebar>
     </div>
 </template>
 <script>
