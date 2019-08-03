@@ -12,7 +12,7 @@
                     :key="i">
                     <a 
                         :href="item.link" 
-                        target="blank">
+                        :target="item.link ? 'blank' : ''">
                         <img :src="item.image" alt="client link">
                     </a>
                 </div>
@@ -37,19 +37,19 @@ export default {
                 },
                 {
                     image: dimashtea_image,
-                    link: "https://gornoesolnce.kz"
+                    link: "https://dimashtea.kz"
                 },
                 {
                     image: dnd_image,
-                    link: "https://gornoesolnce.kz"
+                    link: null
                 },
                 {
                     image: vivo_image,
-                    link: "https://gornoesolnce.kz"
+                    link: null
                 },
                 {
                     image: mobilex_image,
-                    link: "https://gornoesolnce.kz"
+                    link: null
                 },
             ]
         }

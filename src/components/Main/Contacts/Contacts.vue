@@ -31,6 +31,7 @@
                     <div class="contacts__link">
                         <a 
                             class="contacts__email"
+                            target="blank"
                             href="mailto:info@tella.kz">
                             info@tella.kz
                         </a>
@@ -38,6 +39,7 @@
                     <div class="contacts__link">
                         <a 
                             class="contacts__facebook"
+                            target="blank"
                             href="https://www.facebook.com/tella.design">
                             <img 
                                 src="@/assets/social-icon_facebook.svg" 
@@ -45,6 +47,7 @@
                         </a>
                         <a 
                             class="contacts__facebook"
+                            target="blank"
                             href="https://www.instagram.com/tella.design">
                             <img 
                                 src="@/assets/social-icon_instagram.svg" 
