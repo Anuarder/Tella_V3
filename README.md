@@ -1,4 +1,4 @@
-# tella_frontend_v3
+# Tella frontend
 
 ## Project setup
 ```

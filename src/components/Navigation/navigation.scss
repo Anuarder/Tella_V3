@@ -21,17 +21,16 @@
         @include flex_vertical_center();
         font-size: 1.1rem;
     }
+    &__links{
+        display: flex;
+    }
     &__link{
         margin-right: 3rem;
-        &:hover{
-            transition: .1s;
-            color: $tella_green;
-            border-bottom: 2px solid $tella_green;
-        }
+        @include link_transition();
     }
     &__language-switch{
-        @include language-switch_style();
         color: $tella_green;
+        @include language-switch_style();
     }
     &__burger-button{
         display: none;

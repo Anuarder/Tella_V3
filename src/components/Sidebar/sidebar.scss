@@ -36,29 +36,15 @@
         margin-top: 1.5rem;
         font-weight: 600;
         border-bottom: 2px solid transparent;
-        &:hover{
-            transition: .1s;
-            color: $tella_green;
-            border-bottom: 2px solid $tella_green;
-        }
         &:first-child{
             margin-top: 0;
         }
-        @include link_animation(){
-            @for $i from 1 through 4 {
-                &:nth-child(#{$i}) {
-                    animation-delay: $i * (3s / 15);
-                }
-            }
-        }
+        @include link_transition();
     }
     &__language-switch{
         margin-top: 2rem;
         font-size: 1.5rem;
         @include language-switch_style();
-        @include link_animation(){
-            animation-delay: .6s;
-        }
     }
 }
 

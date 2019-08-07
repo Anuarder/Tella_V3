@@ -34,6 +34,32 @@ $tella_green: #24F2AD;
     width: 250px;
     border: 1px solid $tella_green;
 	color: $tella_green;
+	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background-color: $tella_green;
+		transition: .3s;
+	}
+	span{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		width: 100%;
+	}
+	&:hover{
+		transition: .2s;
+		&::before{
+			width: 100%;
+		}
+		color: #0f0f0f;
+	}
 	@media screen and (max-width: 1600px) {
 		font-size: 1.1rem;
 		height: 55px;
@@ -61,9 +87,29 @@ $tella_green: #24F2AD;
 	}
 }
 
+
+@mixin link_transition() {
+	&:hover{
+		transition: .1s;
+		color: $tella_green;
+		border-bottom: 2px solid $tella_green;
+	}
+	@include link_animation(){
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}) {
+				animation-delay: $i * (2s / 15);
+			}
+		}
+	}
+}
+
+
 @mixin language-switch_style() {
 	cursor: pointer;
-    user-select: none;
+	user-select: none;
+	@include link_animation(){
+        animation-delay: .55s;
+    }
 }
 
 @mixin slider_style() {

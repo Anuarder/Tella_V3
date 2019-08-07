@@ -1,35 +1,37 @@
 <template>
     <div class="app-page">
+            
         <v-navigation></v-navigation>
         <div class="app">
-            <div id="header">
+            <div id="header" class="scrollmagic__el-1">
                 <v-header></v-header>
             </div>
-            <div id="about" class="section">
+            <div id="about" class="section scrollmagic__el-2">
                 <v-about></v-about>
             </div>
-            <div id="services" >
+            <div id="services" class="scrollmagic__el-3">
                 <v-services></v-services>
             </div>
-            <div id="projects" class="section">
+            <div id="projects" class="section scrollmagic__el-4">
                 <v-projects></v-projects>
             </div>
-            <div id="clients">
+            <div id="clients" class="scrollmagic__el-5">
                 <v-clients></v-clients>
             </div>
-            <div id="team" class="section">
+            <div id="team" class="section scrollmagic__el-6">
                 <v-team></v-team>
             </div>
-            <div id="meeting" class="section">
+            <div id="meeting" class="section scrollmagic__el-7">
                 <v-meeting></v-meeting>
             </div>
-            <div id="contacts">
+            <div id="contacts" class="scrollmagic__el-8">
                 <v-contacts></v-contacts>
             </div>
         </div>
     </div>
 </template>
 <script>
+import ScrollMagic from "scrollmagic"
 import "./app.scss"
 export default {
     components: {
@@ -42,6 +44,26 @@ export default {
         VTeam: () => import("@/components/Main/Team/Team"),
         VMeeting: () => import("@/components/Main/Meeting/Meeting"),
         VContacts: () => import("@/components/Main/Contacts/Contacts")
+    },
+    data(){
+        return{
+            scrollController: null
+        }
+    },
+    mounted(){
+        this.scrollController = new ScrollMagic.Controller();
+        this.setScrollMagic();
+    },
+    methods: {
+        setScrollMagic(){
+            for(let i = 1; i <= 8; i++){
+                new ScrollMagic.Scene({
+                    triggerElement: `.scrollmagic__el-${i}`, 
+                    triggerHook: 0.6,
+                    reverse: true
+                }).setClassToggle(`.scrollmagic__el-${i}`, 'animate').addTo(this.scrollController);
+            }
+        }
     }
 }
 </script>

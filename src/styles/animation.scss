@@ -1,4 +1,21 @@
-
+.scrollmagic__el-1,
+.scrollmagic__el-2,
+.scrollmagic__el-3,
+.scrollmagic__el-4,
+.scrollmagic__el-5,
+.scrollmagic__el-6,
+.scrollmagic__el-7,
+.scrollmagic__el-8
+{
+    opacity: 0.001; 
+    visibility: visible;
+    transition: .5s;
+    &.animate{
+        opacity: 1;
+        transition: all .5s ease-in-out;
+        transform: translateY(-30px);
+    }
+}
 
 @keyframes showSidebar {
     from {
@@ -29,6 +46,16 @@
     }
     to {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes showTop {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
         opacity: 1;
     }
 }

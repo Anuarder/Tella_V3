@@ -34,7 +34,9 @@
                     href="#meeting" 
                     class="header__link">
                     <button class="header__button">
-                        {{$t("header.send_request")}}
+                        <span>
+                            {{$t("header.send_request")}}
+                        </span>
                     </button>
                 </a>
             </div>
