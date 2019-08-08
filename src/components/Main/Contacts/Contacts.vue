@@ -13,9 +13,9 @@
                         <h1>{{$t('contacts.city')}}</h1>    
                         <p>
                             <span v-html="$t('contacts.address')"></span>
-                            <a href="tel:+77007102822">+7 700 710 28 22</a> 
-                            <br>
                             <a href="tel:+77087385626">+7 708 738 56 26</a>
+                            <br>
+                            <a href="tel:+77007102822">+7 700 710 28 22</a> 
                         </p>
                     </div>
                     <div class="contacts__address">
