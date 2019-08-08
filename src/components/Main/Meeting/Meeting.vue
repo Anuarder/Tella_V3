@@ -82,12 +82,13 @@ export default {
             name: "",
             phone: "",
             isLoading: false,
-            // context: process.env.NODE_ENV == "development" ? process.env.VUE_APP_DEV_CONTEXT : ""
-            context: "https://api.tella.kz/api"
+            context: process.env.NODE_ENV == "development" ? process.env.VUE_APP_DEV_CONTEXT : ""
         }
     },
     created(){
-        // this.getContext();
+        if(process.env.NODE_ENV !== "development"){
+            this.getContext();
+        }
     },
     methods: {
         async sendRequest(){
