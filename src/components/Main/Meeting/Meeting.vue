@@ -31,7 +31,8 @@
                                 type="text" 
                                 :placeholder="$t('meeting.request.name')"
                                 v-model="name"
-                                required>
+                                required
+                                maxlength="30">
                         </div>
                         <div class="meeting__input">
                             <input 
